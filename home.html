@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="left-col">
+			<img src="images/logo2.jpg" class="logo">
+
+			<div class="content">
+				<h1>Made for the best</h1>
+				<p>On a motorycycle, you
+				have the freedom to ride where and when
+			you want.</p>
+				<p>Life is a beautiful ride.</p>
+				<a href="aboutus.html"><button type="button">ABOUT US</button></a>
+			</div>
+		</div>
+		<div class="right-col">
+			<div class="slider">
+				<img src="images/pic1.jpg" id="Slide">
+			</div>
+			<div class="slider-content">
+				<h2>What are the benefits?</h2>
+				<hr>
+				<p>Motorcycle accessories are great way to enhance your riding experience as well as protecting you from mishaps. Falling from sophisticated bike hurts as much as falling from a normal bike. Motorbike accessories keep you safe and at least assure maximum safety during accidents.</p>
+				<p></p>
+
+				<div class="controller">
+					<img src="images/back.png" id="BackBtn">
+					<div class="vertical-line"></div>
+					<img src="images/next.png" id="NextBtn">
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+		var Slide = document.getElementById("Slide");
+		var BackBtn = document.getElementById("BackBtn");
+		var NextBtn = document.getElementById("NextBtn");
+
+		var slideimages = new Array(
+				"images/pic1.jpg",
+				"images/pic2.jpg",
+				"images/pic4.jpg",
+				"images/pic9.jpg",
+				"images/pic10.jpg",
+				"images/pic11.jpg",
+				"images/pic12.jpg",
+				"images/pic13.jpg",
+			);
+
+		let i = 0;
+
+		NextBtn.onclick = function(){
+			if(i < 7){
+
+			Slide.src = slideimages[i+1];
+			i++;
+
+			}
+		}
+
+		BackBtn.onclick = function(){
+			if(i > 0){
+
+			Slide.src = slideimages[i-1];
+			i--;
+			
+			}
+		}
+
+	</script>
+
+</body>
+</html>
